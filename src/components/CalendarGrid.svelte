@@ -1,5 +1,5 @@
 <script lang="ts">
-  let year: number = $state(new Date().getFullYear());
+  let year: number = $state(new Date().getFullYear()); // Temporary: will have dedicated select UI later
 
   let palette: {
     color: string;
@@ -10,7 +10,7 @@
     { color: "#75BFD1", label: "Normal" },
     { color: "#A991DD", label: "Not So Great" },
     { color: "#DD88CC", label: "Bad" },
-  ]);
+  ]); // Temporary: will have dedicated select UI later
 
   let entries: Record<string, number> = $state({
     "2026-01-01": 0,
@@ -20,8 +20,13 @@
     "2026-01-05": 4,
   });
 
+  const months = Array.from({ length: 12 }, (_, i) => i);
+  const days = Array.from({ length: 31 }, (_, i) => i);
+
   let monthLengths = $derived(
-    Array.from({ length: 12 }, (_, m) => new Date(year, m + 1, 0).getDate()),
+    Array.from({ length: 12 }, (_, month) =>
+      new Date(year, month + 1, 0).getDate(),
+    ), // Day 0 of next month = last day of current month
   );
 
   function getDateKey(
@@ -29,10 +34,7 @@
     monthIndex: number,
     dayIndex: number,
   ): string {
-    const month = monthIndex + 1;
-    const day = dayIndex + 1;
-
-    return `${year}-${String(month).padStart(2, "0")}-${String(day).padStart(2, "0")}`;
+    return `${year}-${String(monthIndex + 1).padStart(2, "0")}-${String(dayIndex + 1).padStart(2, "0")}`;
   }
 </script>
 
@@ -40,31 +42,28 @@
   <thead>
     <tr>
       <th></th>
-      {#each Array(12) as _, i}
-        <th class="text-xs">{i + 1}</th>
+      {#each months as month}
+        <th class="text-xs">{month + 1}</th>
       {/each}
     </tr>
   </thead>
 
   <tbody>
-    {#each Array(31) as _, day}
+    {#each days as day}
       <tr>
         <th class="pr-1.5 text-xs">{day + 1}</th>
-        {#each Array(12) as _, month}
+        {#each months as month}
           {#if day < monthLengths[month]}
             <td
               class="h-4 w-4 border-2 sm:h-5 sm:w-5"
               style:background={palette[entries[getDateKey(year, month, day)]]
                 ?.color ?? null}
               onclick={() => {
-                entries = {
-                  ...entries,
-                  [getDateKey(year, month, day)]: 2, // Temporary for now
-                };
+                entries[getDateKey(year, month, day)] = 2; // Temporary: will have separate UI for choosing value later
               }}
             ></td>
           {:else}
-            <td></td>
+            <td></td> <!-- Necessary for table alignment-->
           {/if}
         {/each}
       </tr>

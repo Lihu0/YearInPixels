@@ -13,12 +13,10 @@
       ></div>
 
       <span
-        role="textbox"
-        tabindex="0"
-        contenteditable
-        bind:innerText={paletteValue.label}
         class="py-1.5 text-sm underline underline-offset-[3px] sm:text-base"
-      ></span>
+      >
+        {paletteValue.label}
+      </span>
     </div>
   {/each}
 </div>

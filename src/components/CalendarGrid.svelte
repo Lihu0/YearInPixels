@@ -7,7 +7,7 @@
   let monthLengths = $derived(
     Array.from({ length: 12 }, (_, month) =>
       new Date(year.value, month + 1, 0).getDate(),
-    ), // Day 0 of next month = last day of current month
+    ),
   );
 
   function getDateKey(
@@ -39,7 +39,9 @@
               class="h-4 w-4 border-2 sm:h-5 sm:w-5"
               style:background={palette[
                 entries[getDateKey(year.value, month, day)]
-              ]?.color ?? null}
+              ]?.color}
+              title={palette[entries[getDateKey(year.value, month, day)]]
+                ?.label}
               onclick={() => {
                 entries[getDateKey(year.value, month, day)] = 2; // Temporary: will have separate UI for choosing value later
               }}

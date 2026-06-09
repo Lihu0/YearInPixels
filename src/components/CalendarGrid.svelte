@@ -43,19 +43,17 @@
         <th class="pr-1.5 text-xs">{day + 1}</th>
         {#each months as month}
           {#if day < monthLengths[month]}
+            {const key = getDateKey(year.value, month, day)}
+
             <td
               class="h-4 w-4 border-2 sm:h-5 sm:w-5"
-              style:background={palette[
-                entries[getDateKey(year.value, month, day)]
-              ]?.color}
-              style:anchor-name={getDateKey(year.value, month, day) ===
-              selectedCell
+              style:background={palette[entries[key]]?.color}
+              style:anchor-name={key === selectedCell
                 ? "--selected-cell"
                 : null}
-              title={palette[entries[getDateKey(year.value, month, day)]]
-                ?.label}
+              title={palette[entries[key]]?.label}
               onclick={() => {
-                selectedCell = getDateKey(year.value, month, day);
+                selectedCell = key;
               }}
             ></td>
           {:else}

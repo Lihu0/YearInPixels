@@ -12,14 +12,6 @@
     ), // Day 0 of next month = last day of current month
   );
 
-  function getDateKey(
-    year: number,
-    monthIndex: number,
-    dayIndex: number,
-  ): string {
-    return `${year}-${String(monthIndex + 1).padStart(2, "0")}-${String(dayIndex + 1).padStart(2, "0")}`;
-  }
-
   function closeDialog() {
     selectedCell = null;
   }
@@ -43,7 +35,7 @@
         <th class="pr-1.5 text-xs">{day + 1}</th>
         {#each months as month}
           {#if day < monthLengths[month]}
-            {const key = getDateKey(year.value, month, day)}
+            {const key = `${year.value}-${String(month + 1).padStart(2, "0")}-${String(day + 1).padStart(2, "0")}`}
 
             <td
               class="h-4 w-4 border-2 sm:h-5 sm:w-5"

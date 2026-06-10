@@ -13,6 +13,7 @@
       <button
         class="opacity-40 hover:opacity-100"
         title="Delete color"
+        data-no-export
         onclick={() => {
           Object.entries(entries).forEach(([key, val]) => {
             if (val === i) delete entries[key];
@@ -48,6 +49,7 @@
   <button
     class="flex cursor-pointer items-center gap-2 text-sm opacity-40 hover:opacity-100 sm:text-base"
     title="Add color"
+    data-no-export
     onclick={() => {
       palette.push({ label: "New Color", color: "#000000" });
     }}

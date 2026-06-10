@@ -9,7 +9,7 @@
   let monthLengths = $derived(
     Array.from({ length: 12 }, (_, month) =>
       new Date(year.value, month + 1, 0).getDate(),
-    ),
+    ), // Day 0 of next month = last day of current month
   );
 
   function getDateKey(

@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { toPng } from "html-to-image";
+
   import FileDown from "@lucide/svelte/icons/file-down";
   import FileUp from "@lucide/svelte/icons/file-up";
   import FolderGit2 from "@lucide/svelte/icons/folder-git-2";
@@ -6,6 +8,31 @@
   import Info from "@lucide/svelte/icons/info";
 
   import { entries, palette } from "../lib/state.svelte";
+
+  async function downloadImage() {
+    await document.fonts.ready;
+
+    const node = document.querySelector("main") as HTMLElement;
+    if (!node) {
+      alert("Could not find the main element to export.");
+      return;
+    }
+
+    const dataUrl = await toPng(node, {
+      cacheBust: true,
+      pixelRatio: 1,
+      filter: (el) => {
+        if (!(el instanceof Element)) return true;
+        if (el.hasAttribute("data-no-export")) return false;
+        return true;
+      },
+    });
+
+    const a = document.createElement("a");
+    a.href = dataUrl;
+    a.download = "year-in-pixels.png";
+    a.click();
+  }
 
   function importData() {
     const input = document.createElement("input");
@@ -86,10 +113,10 @@
     <FolderGit2 />
   </a>
   <button
-    class="cursor-not-allowed opacity-50"
-    disabled
-    title="Download as image (WIP)"
-    aria-label="Download as image (WIP)"
+    class="cursor-pointer"
+    title="Download as image"
+    aria-label="Download as image"
+    onclick={downloadImage}
   >
     <ImageDown />
   </button>

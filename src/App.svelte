@@ -22,7 +22,7 @@
       >
         <CalendarGrid />
         <div
-          class="sm:w-37 flex w-full flex-col items-center justify-center gap-4"
+          class="sm:w-fit flex w-full flex-col items-center justify-center gap-4"
         >
           <PaletteSelect />
           <YearSelect />

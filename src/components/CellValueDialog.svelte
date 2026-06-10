@@ -11,11 +11,8 @@
   $effect(() => {
     if (!dialog) return;
 
-    if (selectedCell !== null) {
-      if (!dialog.open) dialog.showModal();
-    } else {
-      if (dialog.open) dialog.close();
-    }
+    if (selectedCell !== null && !dialog.open) dialog.showModal();
+    if (selectedCell === null && dialog.open) dialog.close();
   });
 </script>
 

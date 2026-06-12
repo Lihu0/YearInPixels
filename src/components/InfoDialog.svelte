@@ -115,8 +115,9 @@
         <h3 class={h3}>Autosave</h3>
         <p>
           Your data is automatically saved to your browser's
-          <code>localStorage</code>, so you can build your Year in Pixels over
-          time without worrying about losing your progress.
+          <code>localStorage</code> and protected with the
+          <code>navigator.storage.persist</code> API, so you can build your Year in
+          Pixels over time without worrying about losing your progress.
         </p>
       </section>
     </section>

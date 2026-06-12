@@ -36,6 +36,9 @@
         onclick={() => {
           entries[selectedCell!] = i;
           closeDialog();
+
+          if (Object.keys(entries).length >= 7)
+            void navigator.storage.persist();
         }}
       ></button>
     {/each}

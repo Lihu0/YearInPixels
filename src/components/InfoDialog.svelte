@@ -1,8 +1,11 @@
 <script lang="ts">
   import X from "@lucide/svelte/icons/x";
 
-  import colorPalette from "../assets/colorPalette.webp";
+  import color_dialog from "../assets/color_dialog.png";
+  import color_palette from "../assets/color_palette.webp";
+  import import_and_export from "../assets/import_and_export.webp";
   import preview from "../assets/preview.webp";
+  import year_selection from "../assets/year_selection.webp";
 
   const h1 = "font-semibold text-4xl";
   const h2 = "font-semibold text-2xl";
@@ -48,7 +51,11 @@
 
       <section class={subsection}>
         <h3 class={h3}>Add/Edit Colors</h3>
-        <img alt="Customize Colors" src={colorPalette} width="33%" />
+        <img
+          alt="Customize Colors"
+          src={color_palette}
+          class="w-1/2 sm:w-1/3"
+        />
         <p>
           Click on "Add color" to add a new color to your color palette. You can
           add as many colors as you want (though using too many colors might not
@@ -61,8 +68,55 @@
           in Pixels.
         </p>
         <p>
-          Click on a color to change it, and click on its label to change the
-          label.
+          Select a color to open a color picker, or select the label to edit it.
+        </p>
+      </section>
+
+      <section class={subsection}>
+        <h3 class={h3}>Year Selection</h3>
+        <img alt="Select a Year" src={year_selection} class="w-1/3 sm:w-1/4" />
+        <p>
+          Select the year drop-down to open the list, then choose a different
+          year to update your selection. The website will check your filled-in
+          days and display a list of available years, including the current year
+          if it is not already included.
+        </p>
+      </section>
+
+      <section class={subsection}>
+        <h3 class={h3}>Fill In Pixels</h3>
+        <img
+          alt="Change the Color of a Day"
+          src={color_dialog}
+          class="w-1/2 sm:w-1/3"
+        />
+        <p>
+          Click on any day in your grid and select the color that best
+          represents your activity or mood for that day. You can clear a day by
+          clicking the white button with a red diagonal slash.
+        </p>
+      </section>
+
+      <section class={subsection}>
+        <h3 class={h3}>Import and Export</h3>
+        <img
+          alt="Export as a PNG or JSON, and import JSON"
+          src={import_and_export}
+          class="w-1/3 sm:w-1/4"
+        />
+        <p>
+          You can download your Year in Pixels as a beautiful image to share or
+          keep as a visual record. You can also import and export it as a JSON
+          file.
+        </p>
+      </section>
+
+      <section class={subsection}>
+        <h3 class={h3}>Autosave</h3>
+        <p>
+          Your data is automatically saved to your browser's
+          <code>localStorage</code>, so you can build your Year in Pixels over
+          time without worrying about losing your progress.
         </p>
       </section>
     </section>

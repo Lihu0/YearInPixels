@@ -6,13 +6,6 @@
   import import_and_export from "../assets/import_and_export.webp";
   import preview from "../assets/preview.webp";
   import year_selection from "../assets/year_selection.webp";
-
-  const h1 = "font-semibold text-4xl";
-  const h2 = "font-semibold text-2xl";
-  const h3 = "font-semibold text-xl";
-  const article = " space-y-6";
-  const section = "space-y-4";
-  const subsection = "space-y-2";
 </script>
 
 <dialog
@@ -27,12 +20,12 @@
     >
   </div>
 
-  <article class={article}>
-    <h1 class={h1}>Year in Pixels</h1>
+  <article class="space-y-6">
+    <h1 class="font-semibold text-4xl">Year in Pixels</h1>
     <img alt="A preview of the app" src={preview} />
 
-    <section class={section}>
-      <h2 class={h2}>What is a Year in Pixels?</h2>
+    <section class="space-y-4">
+      <h2 class="font-semibold text-2xl">What is a Year in Pixels?</h2>
       <p>
         A Year in Pixels is a beautiful way to visualize your emotions (or
         anything else you want to track) in a colorful grid. It lets you
@@ -46,11 +39,11 @@
       </p>
     </section>
 
-    <section class={section}>
-      <h2 class={h2}>Features</h2>
+    <section class="space-y-4">
+      <h2 class="font-semibold text-2xl">Features</h2>
 
-      <section class={subsection}>
-        <h3 class={h3}>Add/Edit Colors</h3>
+      <section class="space-y-2">
+        <h3 class="font-semibold text-xl">Add/Edit Colors</h3>
         <img
           alt="Customize Colors"
           src={color_palette}
@@ -72,8 +65,8 @@
         </p>
       </section>
 
-      <section class={subsection}>
-        <h3 class={h3}>Year Selection</h3>
+      <section class="space-y-2">
+        <h3 class="font-semibold text-xl">Year Selection</h3>
         <img alt="Select a Year" src={year_selection} class="w-1/3 sm:w-1/4" />
         <p>
           Select the year drop-down to open the list, then choose a different
@@ -83,8 +76,8 @@
         </p>
       </section>
 
-      <section class={subsection}>
-        <h3 class={h3}>Fill In Pixels</h3>
+      <section class="space-y-2">
+        <h3 class="font-semibold text-xl">Fill In Pixels</h3>
         <img
           alt="Change the Color of a Day"
           src={color_dialog}
@@ -97,8 +90,8 @@
         </p>
       </section>
 
-      <section class={subsection}>
-        <h3 class={h3}>Import and Export</h3>
+      <section class="space-y-2">
+        <h3 class="font-semibold text-xl">Import and Export</h3>
         <img
           alt="Export as a PNG or JSON, and import JSON"
           src={import_and_export}
@@ -111,8 +104,8 @@
         </p>
       </section>
 
-      <section class={subsection}>
-        <h3 class={h3}>Autosave</h3>
+      <section class="space-y-2">
+        <h3 class="font-semibold text-xl">Autosave</h3>
         <p>
           Your data is automatically saved to your browser's
           <code>localStorage</code> and protected with the
@@ -120,6 +113,27 @@
           Pixels over time without worrying about losing your progress.
         </p>
       </section>
+    </section>
+
+    <section class="space-y-4">
+      <h2 class="font-semibold text-2xl">Why Use a Year in Pixels Tracker?</h2>
+      <p>
+        A Year in Pixels offers unique advantages for personal tracking and
+        reflection:
+      </p>
+      <ul class="list-disc pl-6">
+        <li>
+          Visual trends in your Year in Pixels grid tend to reveal trends.
+        </li>
+        <li>
+          A Year in Pixels takes minimal time investment—just seconds each day
+          to update it.
+        </li>
+        <li>
+          You get a colorful grid at the end of the year that summarizes your
+          whole year.
+        </li>
+      </ul>
     </section>
   </article>
 </dialog>

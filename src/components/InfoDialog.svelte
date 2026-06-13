@@ -1,7 +1,7 @@
 <script lang="ts">
   import X from "@lucide/svelte/icons/x";
 
-  import color_dialog from "../assets/color_dialog.png";
+  import color_dialog from "../assets/color_dialog.webp";
   import color_palette from "../assets/color_palette.webp";
   import import_and_export from "../assets/import_and_export.webp";
   import preview from "../assets/preview.webp";

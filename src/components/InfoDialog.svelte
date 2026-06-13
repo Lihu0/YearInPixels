@@ -148,10 +148,10 @@
     <section class="space-y-4">
       <h2 class="font-semibold text-2xl">Conclusion</h2>
       <p>
-        Using a Year In Pixels is just like painting yourself in the coming year
-        through the use of colored pixels every day. You get the chance to
+        Using a Year In Pixels is just like painting yourself for the coming
+        year through the use of colored pixels every day. You get the chance to
         choose the color you want to put every day according to your activities
-        and moods and place it in the little box provided in your canvas. At the
+        and moods and place it in the little box provided on your canvas. At the
         end of the year, you get a nice picture which is beautiful and easy to
         analyze.
       </p>

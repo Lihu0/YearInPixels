@@ -22,7 +22,11 @@
 
   <article class="space-y-6">
     <h1 class="font-semibold text-4xl">Year in Pixels</h1>
-    <img alt="A preview of the app" src={preview} />
+    <img
+      alt="A preview of the app"
+      src={preview}
+      loading="lazy"
+    />
 
     <section class="space-y-4">
       <h2 class="font-semibold text-2xl">What is a Year in Pixels?</h2>
@@ -48,6 +52,7 @@
           alt="Customize Colors"
           src={color_palette}
           class="w-1/2 sm:w-1/3"
+          loading="lazy"
         />
         <p>
           Click on "Add color" to add a new color to your color palette. You can
@@ -67,7 +72,12 @@
 
       <section class="space-y-2">
         <h3 class="font-semibold text-xl">Year Selection</h3>
-        <img alt="Select a Year" src={year_selection} class="w-1/3 sm:w-1/4" />
+        <img
+          alt="Select a Year"
+          src={year_selection}
+          class="w-1/3 sm:w-1/4"
+          loading="lazy"
+        />
         <p>
           Select the year drop-down to open the list, then choose a different
           year to update your selection. The website will check your filled-in
@@ -82,6 +92,7 @@
           alt="Change the Color of a Day"
           src={color_dialog}
           class="w-1/2 sm:w-1/3"
+          loading="lazy"
         />
         <p>
           Click on any day in your grid and select the color that best
@@ -96,6 +107,7 @@
           alt="Export as a PNG or JSON, and import JSON"
           src={import_and_export}
           class="w-1/3 sm:w-1/4"
+          loading="lazy"
         />
         <p>
           You can download your Year in Pixels as a beautiful image to share or
@@ -148,8 +160,8 @@
     <section class="space-y-4">
       <h2 class="font-semibold text-2xl">Conclusion</h2>
       <p>
-        Using a Year In Pixels is just like painting yourself for the coming
-        year through the use of colored pixels every day. You get the chance to
+        Using a Year In Pixels is just like you painting for the coming year
+        through the use of colored pixels every day. You get the chance to
         choose the color you want to put every day according to your activities
         and moods and place it in the little box provided on your canvas. At the
         end of the year, you get a nice picture which is beautiful and easy to

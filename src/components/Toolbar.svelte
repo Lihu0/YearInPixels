@@ -22,7 +22,7 @@
 
     const dataUrl = await toPng(node, {
       cacheBust: true,
-      pixelRatio: 1,
+      pixelRatio: 2,
       filter: (el) => {
         if (!(el instanceof Element)) return true;
         if (el.hasAttribute("data-no-export")) return false;

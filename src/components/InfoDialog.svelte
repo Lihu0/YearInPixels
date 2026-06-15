@@ -10,7 +10,7 @@
 
 <dialog
   id="info-dialog"
-  class="fixed inset-0 m-0 p-5 bg-white w-full sm:w-125 h-screen max-h-none max-w-none shadow-xl backdrop:bg-black/33 backdrop:backdrop-blur-[2px]"
+  class="fixed p-5 w-dvw sm:w-125 max-w-none h-dvh max-h-none shadow-xl backdrop:bg-black/33 backdrop:backdrop-blur-[2px]"
 >
   <div class="flex justify-end">
     <button
@@ -22,11 +22,7 @@
 
   <article class="space-y-6">
     <h1 class="font-semibold text-4xl">Year in Pixels</h1>
-    <img
-      alt="A preview of the app"
-      src={preview}
-      loading="lazy"
-    />
+    <img alt="A preview of the app" src={preview} loading="lazy" />
 
     <section class="space-y-4">
       <h2 class="font-semibold text-2xl">What is a Year in Pixels?</h2>

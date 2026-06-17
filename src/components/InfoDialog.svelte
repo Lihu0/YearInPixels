@@ -1,11 +1,11 @@
 <script lang="ts">
   import X from "@lucide/svelte/icons/x";
 
-  import color_dialog from "../assets/color_dialog.webp";
-  import color_palette from "../assets/color_palette.webp";
-  import import_and_export from "../assets/import_and_export.webp";
+  import colorDialog from "../assets/color-dialog.webp";
+  import colorPalette from "../assets/color-palette.webp";
+  import importAndExport from "../assets/import-and-export.webp";
   import preview from "../assets/preview.webp";
-  import year_selection from "../assets/year_selection.webp";
+  import yearSelection from "../assets/year-selection.webp";
 </script>
 
 <dialog
@@ -46,7 +46,7 @@
         <h3 class="font-semibold text-xl">Add/Edit Colors</h3>
         <img
           alt="Customize Colors"
-          src={color_palette}
+          src={colorPalette}
           class="w-1/2 sm:w-1/3"
           loading="lazy"
         />
@@ -70,7 +70,7 @@
         <h3 class="font-semibold text-xl">Year Selection</h3>
         <img
           alt="Select a Year"
-          src={year_selection}
+          src={yearSelection}
           class="w-1/2 sm:w-1/3"
           loading="lazy"
         />
@@ -86,7 +86,7 @@
         <h3 class="font-semibold text-xl">Fill In Pixels</h3>
         <img
           alt="Change the Color of a Day"
-          src={color_dialog}
+          src={colorDialog}
           class="w-1/2 sm:w-1/3"
           loading="lazy"
         />
@@ -101,7 +101,7 @@
         <h3 class="font-semibold text-xl">Import and Export</h3>
         <img
           alt="Export as a PNG or JSON, and import JSON"
-          src={import_and_export}
+          src={importAndExport}
           class="w-1/2 sm:w-1/3"
           loading="lazy"
         />

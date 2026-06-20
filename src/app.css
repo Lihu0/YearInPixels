@@ -27,8 +27,9 @@
 @theme {
   --font-handwritten-cursive:
     "Satisfy", "Segoe Script", "Apple Chancery", "Snell Roundhand", cursive,
-    system-ui;
+    system-ui, sans-serif;
   --font-handwritten-sans:
-    "Kalam", "Comic Sans MS", "Segoe Print", "Bradley Hand", system-ui;
+    "Kalam", "Comic Sans MS", "Segoe Print", "Bradley Hand", cursive, system-ui,
+    sans-serif;
   --color-graphite: oklch(22.17% 0.0326 264.28);
 }

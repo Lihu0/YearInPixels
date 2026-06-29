@@ -39,7 +39,7 @@ Before running or developing this project, ensure the following are installed:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/Lihu0/YearInPixels.git
+   git clone https://github.com/Lihu0/year-in-pixels.git
    ```
 2. Navigate into the project directory:
    ```bash
@@ -63,6 +63,24 @@ yarn dev # yarn
 ```
 
 Open your browser and navigate to `localhost:5173` (or the port specified in your terminal) to view the site.
+
+### Building
+
+To Create your own production version of this site, run:
+
+```bash
+npm run build # npm
+pnpm build # pnpm
+yarn build # yarn
+```
+
+Then, you can preview the site by running:
+
+```bash
+npm run preview # npm
+pnpm preview # pnpm
+yarn preview # yarn
+```
 
 ## Licensing
 

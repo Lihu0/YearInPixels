@@ -31,6 +31,7 @@
     <ChevronDown
       strokeWidth={3}
       class="pointer-events-none absolute right-2 top-1/2 size-4 -translate-y-1/2 text-orange-700"
-    /> <!-- Guarantees the chevron will show in html-to-image -->
+    />
+    <!-- Guarantees the chevron will show in html-to-image -->
   </div>
 </div>

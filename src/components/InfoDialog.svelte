@@ -1,11 +1,11 @@
 <script lang="ts">
   import X from "@lucide/svelte/icons/x";
 
-  import colorDialog from "../assets/color-dialog.webp";
-  import colorPalette from "../assets/color-palette.webp";
-  import importAndExport from "../assets/import-and-export.webp";
-  import preview from "../assets/preview.webp";
-  import yearSelection from "../assets/year-selection.webp";
+  import colorDialog from "../assets/color-dialog.avif";
+  import colorPalette from "../assets/color-palette.avif";
+  import importAndExport from "../assets/import-and-export.avif";
+  import preview from "../assets/preview.avif";
+  import yearSelection from "../assets/year-selection.avif";
 </script>
 
 <dialog
